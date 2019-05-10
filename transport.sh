@@ -12,6 +12,6 @@ ABORT() {
 git add .
 [[ $? -ne 0 ]] && ABORT "add error"
 git commit -m "update" .
-if [ $? -ne 0] && ABORT "commit error"
+[[ $? -ne 0 ]] && ABORT "commit error"
 git push
-if [ $? -ne 0] && ABORT "push error"
+[[ $? -ne 0 ]] && ABORT "push error"
