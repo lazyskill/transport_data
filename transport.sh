@@ -10,8 +10,8 @@ ABORT() {
 }
 
 git add .
-[ $? -ne 0] && ABORT "add error"
+[[ $? -ne 0 ]] && ABORT "add error"
 git commit -m "update" .
-[ $? -ne 0] && ABORT "commit error"
+if [ $? -ne 0] && ABORT "commit error"
 git push
-[ $? -ne 0] && ABORT "push error"
+if [ $? -ne 0] && ABORT "push error"
