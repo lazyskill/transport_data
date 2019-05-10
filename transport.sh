@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+cd /home/jun/transport_data/
 cp ~/mserver/EntranceServer/huginn_*.csv ./
 red='\033[0;31m'
 green='\033[0;32m'
@@ -9,6 +10,7 @@ ABORT() {
     exit 1
 }
 
+touch a
 git add .
 [[ $? -ne 0 ]] && ABORT "add error"
 git commit -m "update" .
