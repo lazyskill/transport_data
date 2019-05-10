@@ -10,7 +10,6 @@ ABORT() {
     exit 1
 }
 
-touch a
 git add .
 [[ $? -ne 0 ]] && ABORT "add error"
 git commit -m "update" .
